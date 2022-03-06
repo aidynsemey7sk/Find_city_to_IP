@@ -24,7 +24,7 @@ def get_info_by_ip(ip='127.0.0.1'):
         area = folium.Map(location=[response.get(
             'lat'), response.get('lon')], zoom_start=13)
         folium.Marker(
-            [response.get('lat'), response.get('lon')], popup="<i>Mt. Hood Meadows</i>", tooltip="Этот пёс находится тут"
+            [response.get('lat'), response.get('lon')], tooltip="Этот пёс находится тут"
         ).add_to(area)
         area.save(f"{response.get('query')}_{response.get('city')}.html")
 
